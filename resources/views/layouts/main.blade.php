@@ -41,6 +41,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="topbar-inner">
+
+                        <div id="google_translate_element"></div>
+
                         <div class="left-contnet">
                             <ul class="info-items">
                                 <li><a href="tel:000111555"><i class="flaticon-phone"></i> +15068001777</a></li>
@@ -48,6 +51,7 @@
                                 <li><a href=""><i class="flaticon-clock"></i> 10:00 Am - 06:00 Pm</a></li>
                             </ul>
                         </div>
+
                         <div class="right-contnet">
                             <div class="social-link">
                                 <ul>
@@ -134,8 +138,8 @@
                     <div class="footer-widget widget widget_nav_menu">
                         <h4 class="widget-title">Our services</h4>
                         <ul>
-                            <li><a href="{{ url('services') }}">Warhouse</a></li>
-                            <li><a href="{{ url('services') }}">Air Fright Soultions for all</a></li>
+                            <li><a href="{{ url('services') }}">Warehouse</a></li>
+                            <li><a href="{{ url('services') }}">Air Fright Solutions for all</a></li>
                             <li><a href="{{ url('services') }}">Sea Fright solutions & Catering</a></li>
                             <li><a href="{{ url('services') }}">Storage</a></li>
                         </ul>
@@ -250,6 +254,15 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>
