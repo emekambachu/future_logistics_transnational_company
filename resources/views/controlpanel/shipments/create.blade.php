@@ -584,8 +584,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12"><p class="font-weight-bold">Parcel</p></div>
-                    <div class="col-md-6">
+
+                    <div class="col-md-12 mt-3">
+                        <p class="font-weight-bold">Parcel</p>
+                    </div>
+
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label>Select Parcel</label>
                             <select class="form-control" name="parcel" required>
@@ -598,12 +602,49 @@
                         </div>
                     </div>
 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Shipment Mode</label>
+                            <select class="form-control" name="shipment_mode" required>
+                                <option selected value=""></option>
+                                <option value="Land">Land</option>
+                                <option value="Sea">Sea</option>
+                                <option value="Air">Air</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Payment Mode</label>
+                            <select class="form-control" name="payment_mode">
+                                <option selected value=""></option>
+                                <option value="Bank Transfer">Bank Transfer</option>
+                                <option value="Card Payment">Card Transfer</option>
+                                <option value="Cash">Cash</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="col-md-6 mt-3">
                         <label>Parcel Weight (KG)</label>
-                        <input type="number" class="form-control" name="parcel_weight" placeholder="Enter parcel weight (KG)" required>
+                        <input type="number" class="form-control" name="parcel_weight"
+                               placeholder="Enter parcel weight (KG)">
                     </div>
-                </div>
 
+                    <div class="col-md-6 mt-3">
+                        <label>Product Quantity</label>
+                        <input type="number" class="form-control" name="quantity"
+                               placeholder="Enter product quantity" required>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                        <label>Parcel Description</label>
+                        <input type="text" maxlength="100" class="form-control" name="product"
+                               placeholder="Enter product description" required>
+                    </div>
+
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 

@@ -14,6 +14,12 @@ class Shipment extends Model
         'tracking_id',
         'is_active',
 
+        'product',
+        'carrier_ref',
+        'quantity',
+        'shipment_mode',
+        'payment_mode',
+
     ];
 
     public function userDetail(){

@@ -21,9 +21,16 @@ class CreateShipmentsTable extends Migration
             $table->integer('parcel_weight');
 
             $table->integer('user_detail_id')->unsigned()->index();
-            $table->foreign('user_detail_id')->references('id')->on('user_details')->onDelete('cascade');
-
+            $table->foreign('user_detail_id')->references('id')
+                ->on('user_details')->onDelete('cascade');
             $table->string('tracking_id');
+
+            $table->string('product')->nullable();
+            $table->string('payment_mode')->nullable();
+            $table->string('carrier_ref');
+            $table->integer('quantity');
+            $table->string('shipment_mode');
+
 
             $table->tinyInteger('is_active')->default('1');
 

@@ -54,7 +54,16 @@ class ShipmentController extends Controller
             return $randomString;
         }
 
-        $input['tracking_id'] = TrackingId();
+        //Generate Carrier Reference Number
+        function CarrierRef($length = 6){
+            $characters = '0123456789';
+            $charactersLength = strlen($characters);
+            $randomString = 'CARR-';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[random_int(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
 
         $userDetails = UserDetails::create([
 
@@ -75,7 +84,13 @@ class ShipmentController extends Controller
             'user_detail_id' => $userDetails->id,
             'parcel' => $input['parcel'],
             'parcel_weight' => $input['parcel_weight'],
-            'tracking_id' => $input['tracking_id'],
+            'tracking_id' => TrackingId(),
+
+            'product' => $input['product'],
+            'carrier_ref' => CarrierRef(),
+            'quantity' => $input['quantity'],
+            'shipment_mode' => $input['shipment_mode'],
+            'payment_mode' => $input['payment_mode'],
         ]);
 
         //Add all values to data array
@@ -89,7 +104,7 @@ class ShipmentController extends Controller
             'receiver_name' => $userDetails->receiver_name,
             'receiver_email' => $userDetails->receiver_email,
             'receiver_country' => $userDetails->receiver_country,
-            'tracking_id' => $input['tracking_id'],
+            'tracking_id' => TrackingId(),
         ];
 
         //send email to user

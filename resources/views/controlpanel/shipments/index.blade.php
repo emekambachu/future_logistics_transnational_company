@@ -39,8 +39,14 @@
 
                                     <tr>
                                         <td class="c-table__cell"> {{ $loop->iteration }} </td>
-                                        <td class="c-table__cell"> {{ $ship->parcel }} </td>
-                                        <td class="c-table__cell"> {{ $ship->parcel_weight }}KG </td>
+                                        <td class="c-table__cell">
+                                            <strong>Parcel:</strong> {{ $ship->parcel }}<br>
+                                            <strong>Product:</strong> {{ $ship->product }}
+                                        </td>
+                                        <td class="c-table__cell">
+                                            <strong>Weight:</strong> {{ $ship->parcel_weight }}KG<br>
+                                            <strong>Quantity:</strong> {{ $ship->quantity }}
+                                        </td>
                                         <td class="c-table__cell"> {{ $ship->userDetail ? $ship->userDetail->sender_name: 'Not Assigned' }} </td>
                                         <td class="c-table__cell"> {{ $ship->userDetail ? $ship->userDetail->receiver_name: 'Not Assigned' }} - {{ $ship->userDetail ? $ship->userDetail->receiver_email: 'Not Assigned' }} </td>
                                         <td class="c-table__cell"> {{ $ship->tracking_id }} </td>
