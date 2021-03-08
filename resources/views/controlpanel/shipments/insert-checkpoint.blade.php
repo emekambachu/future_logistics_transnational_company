@@ -288,6 +288,7 @@
                         <option value="pending">Pending</option>
                         <option value="On Hold">On Hold</option>
                         <option value="In Transit">In Transit</option>
+                        <option value="Dispatched">Dispatched</option>
                         <option value="Received Office">Received Office</option>
                         <option value="Customs">Customs</option>
                         <option value="Custom Clearance">Custom Clearance</option>

@@ -30,6 +30,9 @@ Route::get('contact', static function () {
     return view('contact');
 });
 
+Route::post('contact/submit', [App\Http\Controllers\HomeController::class , 'contactFormSubmit'])
+    ->name('contact.form.submit');
+
 Route::get('signup', static function () {
     return view('signup');
 });
