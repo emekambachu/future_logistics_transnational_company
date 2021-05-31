@@ -62,7 +62,7 @@ class ShipmentHistoryController extends Controller
         Mail::send('emails.new-checkpoint', $data, static function ($message) use ($data) {
             $message->from('info@fltransnational.com', 'Future Logistic Transnational Company');
             $message->to($data['email'], $data['name']);
-            $message->replyTo('Info@cargobaselogistics.com', 'Future Logistic Transnational Company');
+            $message->replyTo('info@fltransnational.com', 'Future Logistic Transnational Company');
             $message->subject('Shipment checkpoint at '.$data['location']);
         });
 
