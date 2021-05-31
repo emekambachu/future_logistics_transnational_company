@@ -43,8 +43,8 @@ class HomeController extends Controller
         //send email to user
         Mail::send('emails.contact-message', $data, static function($message) use ($data){
             $message->from('info@fltransnational.com', 'Future Logistic Transnational Company');
-            $message->to('info@fltransnational.com', 'Future Logistic Transnational Company');
-            $message->replyTo('info@fltransnational.com', 'Future Logistic Transnational Company');
+            $message->to('support@fltransnational.com', 'Future Logistic Transnational Company');
+            $message->replyTo('support@fltransnational.com', 'Future Logistic Transnational Company');
             $message->subject('Contact message from '.$data['name']);
         });
 

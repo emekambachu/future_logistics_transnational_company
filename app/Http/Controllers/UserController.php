@@ -89,7 +89,7 @@ class UserController extends Controller
         //send email to Admin
         Mail::send('emails.new-signup-admin', $data, static function($message) use ($data){
             $message->from('info@fltransnational.com', 'Future Logistic Transnational Company');
-            $message->to('info@fltransnational.com');
+            $message->to('support@fltransnational.com');
             $message->replyTo('info@fltransnational.com', 'Future Logistic Transnational Company');
             $message->subject($data['name'].' Just Signed up to Softlink Express');
         });
